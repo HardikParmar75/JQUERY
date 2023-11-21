@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-cdn.js"></script>
+</head>
+<body>
+    type here...<input type="text" id="i1">
+    <a href="xyz.html" id="a2">click here</a>
+    <h1></h1>
+    <h2></h2>
+    <script>
+        $('#i1').val("patanahi")
+        $('#i1').attr("value","pata nahi ho")
+        $('#a2').attr("href","xyz.html")
+        $('#i1').val($('#a2').attr("href"))
+        $('h1').html("<u>hello</u>")
+        $('h2').text('<b>pagal</b>')
+    </script>
+</body>
+</html>

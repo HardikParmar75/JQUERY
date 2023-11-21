@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-cdn.js"></script>
+    <style>
+        .x{
+            color: red;
+            background-color: burlywood;
+        }
+    </style>
+</head>
+<body>
+    <p id="p1">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, fuga. Tenetur minima eligendi dolor soluta, repellat nulla minus dolorem adipisci, quae ratione suscipit repudiandae autem natus cumque voluptate, aperiam necessitatibus.
+    </p>
+    <button id="btn1">hide</button>
+    <button id="btn2">show</button>
+    <button id="btn3">hide-show</button>
+    <button id="btn4">fade to</button>
+    <button id="btn5">slide toggle</button>
+    <button id="btn6">add class</button>
+    <button id="btn7">remove class</button>
+    <button id="btn8">toggle class</button>
+    <button id="btn9">add css</button>
+    <button id="btn10">remove css</button>
+    <script>
+        // function test(){
+        //     $('#p1').hide()
+        // }
+        // test()
+
+        // $('#btn1').click(function test(){
+        //     $('#p1').hide()
+        // })
+
+        // $('#btn2').click(function (){
+        //     $('#p1').show()
+        // })
+
+        // $('#btn3').click( ()=>{
+        //     $('#p1').toggle()
+        // })
+
+        $('#btn1').click(function(){
+            $('#p1').fadeOut(1000)
+        })
+
+        $('#btn2').click(function(){
+            $('#p1').fadeIn(1000)
+        })
+
+        $('#btn3').click(function(){
+            $('#p1').toggle(4000)
+        })
+
+        $('#btn5').click(function(){
+            $('#p1').slideToggle(4000)
+        })
+
+        $('#btn4').click(function(){
+            $('#p1').fadeTo("slow",0.1)
+        })
+
+        $('#btn6').click(function(){
+            $('#p1').addClass('x')
+        })
+
+        $('#btn7').click(function(){
+            $('#p1').removeClass('x')
+        })
+
+        $('#btn8').click(function(){
+            $('#p1').toggleClass('x')
+        })
+
+        $('#btn9').click(function(){
+            $('#p1').css('background-color','blue')
+        })
+
+        $('#btn10').click(function(){
+            $('#p1').css('background-color','')
+        })
+    </script>
+</body>
+</html>
