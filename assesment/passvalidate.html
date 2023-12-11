@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-cdn.js"></script>
+</head>
+
+<body>
+    <form>
+        <h1>
+            Password Checker Jquery
+        </h1>
+        <input type="password" id="pass">
+        <span id="b11"></span>
+        <button id="btn">submit</button>
+    </form>
+    <script>
+        fnm_ex = /^[a-zA_Z0-9@.#!$%^&*]{2,8}$/;
+        $('#pass').blur(function () {
+            if ($('#pass').val() == "") {
+                $('#b11').html("*required");
+                $('#b11').css("color", "red")
+
+            }
+        })
+        $('#pass').keyup(function () {
+            if (!fnm_ex.test($('#pass').val())) {
+                $('#btn').html("weak").css({ backgroundColor: "red", color: "white" });
+            } else {
+                $('#btn').html("strong").css({ backgroundColor: "green", color: "white" });
+            }
+        })
+    </script>
+</body>
+
+</html>
